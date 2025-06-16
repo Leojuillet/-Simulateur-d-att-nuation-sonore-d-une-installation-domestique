@@ -84,8 +84,9 @@ Supposons les paramètres suivants :
   - Python standard – Calculs acoustiques simplifiés
 
 📥 Installation locale
-Prérequis
-Python 3.8+
+
+Prérequis:
+Python 3.8+ ; 
 pip
 
 🤝 Contribution
