@@ -67,9 +67,10 @@ Supposons les paramètres suivants :
 1. **Atténuation due à la distance** :
     20 × log10(10) = 20 dB
 2. **Atténuation due aux obstacles** :
-    Caisson : 10 dB
-    Végétation dense : 10 dB
-    Total : 10 + 10 = 20 dB
+    + Caisson : 10 dB
+    + Végétation dense : 10 dB
+      
+        --> Total : 10 + 10 = 20 dB
 3. **Atténuation totale**:
     20 dB (distance) + 20 dB (obstacles) = 40 dB
 4. **Niveau sonore final** :
