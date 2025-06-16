@@ -19,10 +19,10 @@ distance_max = st.sidebar.slider("Distance jusqu'au voisin (mètres)", min_value
 st.sidebar.subheader("Choisissez les dispositifs d'atténuation")
 options_attenuation = {
     "Aucun": 0,
-    "Caisson insonorisé": 10,
-    "Écran acoustique": 20,
-    "Mur béton (10cm d'épaiseur)": 45,
-    "Végétation dense (haie)": 10,
+    "Caisson insonorisé : -10dB": 10,
+    "Écran acoustique : -20dB": 20,
+    "Mur béton (10cm d'épaiseur) : -45dB": 45,
+    "Végétation dense (haie) : -10dB": 10,
 }
 
 selected_obstacles = []
