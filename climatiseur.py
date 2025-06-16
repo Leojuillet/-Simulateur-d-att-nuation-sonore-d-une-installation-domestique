@@ -21,7 +21,7 @@ options_attenuation = {
     "Aucun": 0,
     "Caisson insonorisé : -10dB": 10,
     "Écran acoustique : -20dB": 20,
-    "Mur béton (10cm d'épaiseur) : -45dB": 45,
+    "Mur béton (10cm d'épaiseur) : -25dB": 25,
     "Végétation dense (haie) : -10dB": 10,
 }
 
@@ -34,7 +34,7 @@ for key in options_attenuation:
 distances = np.arange(0.1, 20.1, 0.1)
 attenuation_distance = 20 * np.log10(distances)
 total_attenuation_obstacles = sum(options_attenuation[obstacle] for obstacle in selected_obstacles)
-final_dB_by_distance = initial_dB - (attenuation_distance + total_attenuation_obstacles)
+final_dB_by_distance = max(0.0, initial_dB - (attenuation_distance + total_attenuation_obstacles))
 
 # Récupérer le niveau sonore à la distance choisie
 final_dB_at_distance = final_dB_by_distance[int(distance_max * 10) - 1]
