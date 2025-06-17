@@ -3,7 +3,7 @@ import numpy as np
 import plotly.graph_objects as go
 
 # Titre de l'application
-st.title("Simulateur d'atténuation sonore d'une installation domestique")
+st.title("🏠 Simulateur d'atténuation sonore d'une installation domestique")
 st.markdown("Simulez comment le bruit d'un appareil extérieur diminue avec la distance et les dispositifs anti-bruits.")
 
 # Message d'aide pour mobile
