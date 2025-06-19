@@ -91,7 +91,7 @@ fig.update_layout(
     title="Atténuation du niveau sonore en fonction de la distance",
     xaxis_title="Distance (m)",
     yaxis_title="Niveau sonore (dB)",
-    yaxis_range=[0, initial_dB + 5],
+    #yaxis_range=[0, initial_dB + 5], # spécifier yaxis_range pour forcer une plage fixe
     template="plotly_white"
 )
 
