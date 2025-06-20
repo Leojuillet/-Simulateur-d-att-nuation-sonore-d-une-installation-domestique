@@ -81,7 +81,6 @@ fig.add_trace(go.Scatter(
 ))
 
 fig.add_hline(y=plafond, line_dash="dot", line_color="red", annotation_text="Plafond réglementaire (30 dB)")
-fig.add_hline(y=audible, line_dash="dot", line_color="green", annotation_text="Niveau audible (20 dB)")
 
 fig.update_layout(
     title="Atténuation du niveau sonore en fonction de la distance",
