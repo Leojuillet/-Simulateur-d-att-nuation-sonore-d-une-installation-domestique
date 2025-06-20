@@ -43,13 +43,12 @@ distances = np.arange(0.1, 20.1, 0.1)  # de 0.1 à 20.0 mètres
 attenuation_distance = 20 * np.log10(distances)
 total_attenuation_obstacles = sum(options_attenuation[obstacle] for obstacle in selected_obstacles)
 
-# Calcul du niveau sonore final
-
-#final_dB_by_distance = np.clip(
-#    initial_dB - (attenuation_distance + total_attenuation_obstacles),
-#    0, None
-#)
-final_dB_by_distance = initial_dB - (attenuation_distance + total_attenuation_obstacles)
+# Calcul du niveau sonore final (sans valeur négative)
+final_dB_by_distance = np.clip(
+    initial_dB - (attenuation_distance + total_attenuation_obstacles),
+    0, None
+)
+#final_dB_by_distance = initial_dB - (attenuation_distance + total_attenuation_obstacles)
 
 # Récupérer le niveau sonore à la distance choisie
 index = int(distance_max * 10) - 1  # car on a un pas de 0.1 m
