@@ -64,13 +64,10 @@ st.metric(label="Niveau sonore à {:.1f} m".format(distance_max), value=f"{round
 
 # Plafond réglementaire
 plafond = 30
-audible = 20
-if final_dB_at_distance < audible:
-    st.success(f"🔇✅ Le niveau sonore final ({round(final_dB_at_distance, 1)} dB) est inférieur au niveau audible de {audible} dB.")
-elif final_dB_at_distance <= plafond:
-    st.success(f"🔊✅ Le niveau sonore final ({round(final_dB_at_distance, 1)} dB) est supérieur au niveau audible mais conforme au plafond réglementaire.")
+if final_dB_at_distance <= plafond:
+    st.success(f"✅ Le niveau sonore final ({round(final_dB_at_distance, 1)} dB) est conforme au plafond réglementaire.")
 else:
-    st.error(f"📢❌ Le niveau sonore final ({round(final_dB_at_distance, 1)} dB) dépasse le plafond réglementaire de {plafond} dB.")
+    st.error(f"❌ Le niveau sonore final ({round(final_dB_at_distance, 1)} dB) dépasse le plafond réglementaire de {plafond} dB.")
 
 # Graphique Plotly
 fig = go.Figure()
